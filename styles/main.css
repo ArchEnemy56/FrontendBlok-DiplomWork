@@ -1,0 +1,270 @@
+@font-face {
+    font-family: "Montserrat-Bold", sans-serif;
+    src: local('Montserrat-Bold'), url('../fonts/Montserrat-Bold.ttf') format('truetype');
+
+    font-family: "Montserrat-Regular";
+    src: local('Montserrat-Regular'), url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    font-family: "Montserrat-Bold", sans-serif;
+    font-family: "Montserrat-Regular", sans-serif;
+    --dark: rgba(43, 53, 65, 1);
+    --yellow: rgba(251, 241, 56, 1);
+}
+
+body {
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1142px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    max-width: 1143px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.logo {
+    display: block;
+    width: 97px;
+    height: 30px;
+    margin-right: 92px;
+    background-image: url(../images/logo.svg);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--dark);
+    text-decoration: none;
+    margin-right: 54px;
+}
+
+.social-link {
+    position: absolute;
+    right: 0;
+    color: var(--dark);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.social-link::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-color: var(--yellow);
+    border-radius: 100%;
+    position: absolute;
+    z-index: -1;
+    left: -13px;
+}
+
+.hero {
+    display: flex;
+    height: calc(100vh - 100px);
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.hero-text {
+    flex-basis: 60%;
+    color: var(--dark);
+}
+
+.hero-text .description {
+    font-size: 40px;
+    line-height: 1.25;
+}
+
+.description-text {
+    display: flex;
+    width: 100%;
+    max-width: 297px;
+    margin-left: 90px;
+}
+
+.hero-text h1 {
+    font-family: "Montserrat-Bold", sans-serif;
+    width: 100%;
+    max-width: 632px;
+    font-size: clamp(26px, 4.5vw, 48px);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.hero-bg {
+    height: clamp(493px, 50vw, 852px);
+    flex-basis: calc(40% - 20px);
+    opacity: 0.2;
+    background: linear-gradient(90deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 145.23%);
+}
+
+.hero-img {
+    position: absolute;
+    right: -10vw;
+    bottom: 0;
+    width: clamp(399px, 50vw, 996px);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 309px 73px 281px;
+    grid-template-areas: "a b c" "d b f" "d e f";
+    gap: 20px;
+}
+
+.item {
+    border: 1px solid #000;
+}
+
+.item:nth-child(1) {
+    grid-area: a;
+}
+
+.item:nth-child(2) {
+    grid-area: b;
+}
+
+.item:nth-child(3) {
+    grid-area: c;
+}
+
+.item:nth-child(4) {
+    grid-area: d;
+}
+
+.item:nth-child(5) {
+    grid-area: e;
+}
+
+.item:nth-child(6) {
+    grid-area: f;
+}
+
+.form {
+    max-width: 620px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+}
+
+.form>div {
+    flex-basis: calc(100% - 255px - 20px);
+}
+
+.form button {
+    flex-basis: 255px;
+}
+
+.checkbox:checked,
+.checkbox:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.checkbox:checked+label,
+.checkbox:not(:checked)+label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+}
+
+/* Стили для псевдоэлемента before с фоном и обводкой, когда пункт активен */
+.checkbox:checked+label::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: calc(50% - 10px);
+    background-color: #2B3541;
+    border-radius: 2px;
+    border: 2px solid #2B3541;
+}
+
+/* Стили для псевдоэлемента after с изображением, когда пункт активен */
+.checkbox:checked+label::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    transition: all .2s ease;
+    opacity: 1;
+    left: 4px;
+    top: calc(50% - 6px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/2048px-White_check.svg.png);
+}
+
+/* Стили для псевдоэлемента before с фоном и обводкой, когда пункт НЕ активен */
+.checkbox:not(:checked)+label::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: calc(50% - 10px);
+    background-color: transparent;
+    border-radius: 2px;
+    border: 2px solid #2B3541;
+}
+
+/* Стили для псевдоэлемента after с изображением, когда пункт НЕ активен */
+.checkbox:not(:checked)+label::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    transition: all .2s ease;
+    opacity: 0;
+    left: 4px;
+    top: calc(50% - 6px);
+    background-position: 0 -12px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/2048px-White_check.svg.png);
+}
+
+.radio:checked+label::before {
+    border-radius: 100%;
+}
+
+
+@media (max-width: 1500px) {
+    .hero img {
+        right: -2vw;
+    }
+}
+
+@media (max-width: 1220px) {
+    .hero img {
+        right: 5px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 224px);
+        grid-template-areas: "a b" "c d" "e f";
+    }
+}
