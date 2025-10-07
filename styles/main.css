@@ -80,6 +80,7 @@ body {
     align-items: center;
     gap: 20px;
     position: relative;
+    margin-bottom: 160px;
 }
 
 .hero-text {
@@ -87,16 +88,41 @@ body {
     color: var(--dark);
 }
 
-.hero-text .description {
+.hero-text .description-num {
     font-size: 40px;
     line-height: 1.25;
 }
 
-.description-text {
+.description-num {
+    margin-bottom: 20px;
+}
+
+.description {
     display: flex;
+    margin-left: 90px;
+    flex-direction: column;
+}
+
+.description-text {
     width: 100%;
     max-width: 297px;
-    margin-left: 90px;
+}
+
+.btn-yellow {
+    max-width: 190px;
+    margin-top: 40px;
+    background: var(--yellow);
+    text-decoration: none;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 20px 30px 20px 30px;
+}
+
+.btn-yellow span {
+    display: flex;
+    color: var(--dark);    
 }
 
 .hero-text h1 {
@@ -106,6 +132,7 @@ body {
     font-size: clamp(26px, 4.5vw, 48px);
     font-weight: 700;
     line-height: 1.25;
+    text-transform: uppercase;
 }
 
 .hero-bg {
