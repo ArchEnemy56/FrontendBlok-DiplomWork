@@ -14,13 +14,15 @@
         <div class="header">
             <a href="" class="logo"></a>
             <nav class="nav-menu">
-                <a href="#" class="nav-link">Мероприятия</a>
-                <a href="#" class="nav-link">Расписание</a>
-                <a href="#" class="nav-link">О компании</a>
+                <a href="#Events" class="nav-link">Мероприятия</a>
+                <a href="#schedule" class="nav-link">Расписание</a>
+                <a href="#navAbout" class="nav-link">О компании</a>
             </nav>
             <a href="mailto:info@freefit.com" class="social-link" target="_blank">info@freefit.com</a>
+
+            <button type="button" class="btn-burger" id="btnBurger"></button>
         </div>
-        <div class="hero">
+        <div class="hero" id="Events">
             <div class="hero-text">
                 <h1>онлайн тренировки любой сложности</h1>
                 <p class="description-num"><span>&gt;&nbsp;15</span> <span>тренировок</span></p>
@@ -34,7 +36,7 @@
             <a href="#01" class="arrow"></a>
         </div>
 
-        <div class="training">
+        <div class="training" id="schedule">
             <h3 class="title-h3">Расписание тренировок</h3>
             <p class="date">22 - 28 июня</p>
         </div>
@@ -101,7 +103,7 @@
         </form>
     </div>
 
-    <section class="about">
+    <section class="about" id="navAbout">
         <div class="container">
             <div class="about-info">
                 <div class="about-text">
@@ -144,9 +146,9 @@
         <div class="footer-top">
             <a href="" class="logo"></a>
             <nav class="nav-menu">
-                <a href="#" class="nav-link">Мероприятия</a>
-                <a href="#" class="nav-link">Расписание</a>
-                <a href="#" class="nav-link">О компании</a>
+                <a href="#Events" class="nav-link">Мероприятия</a>
+                <a href="#schedule" class="nav-link">Расписание</a>
+                <a href="#navAbout" class="nav-link">О компании</a>
             </nav>
             <a href="mailto:info@freefit.com" class="social-link" target="_blank">info@freefit.com</a>
         </div>
@@ -156,6 +158,18 @@
             <p class="right">Сделано в рамках курса учебной платформы <a class="pers" href="https://cabinet.frontendblok.com/courses">Frontend Blok<a></p>
         </div>
     </footer>
+
+    <div class="modal" id="modal">
+            <nav class="nav-menu">
+                <a href="#" class="logo"></a>
+                <a href="#Events" class="nav-link">Мероприятия</a>
+                <a href="#schedule" class="nav-link">Расписание</a>
+                <a href="#navAbout" class="nav-link">О компании</a>
+            </nav>
+            <button type="button" class="btn-close" id="btnClose"></button>
+    </div>
+
+    <script src="scripts/scripts.js"></script>
 </body>
 
 </html>
