@@ -524,10 +524,19 @@ input:invalid:focus {
     margin-bottom: 34px;
 }
 
-.about-info {
-    display: flex;
+.about-info {display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 4vw;
     margin-bottom: 80px;
+}
+
+.about-img {
+    width: 100%;
+    background-image: url(../images/trainer.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 ul {
@@ -682,6 +691,55 @@ ul {
 }
 
 @media (max-width: 768px) {
+
+    .hero-text h1{
+        font-size: 26px;
+        letter-spacing: 2px;
+    }
+
+    .hero-text .description-num {
+        font-size: 26px;
+        letter-spacing: 2px;
+    }
+
+    .description {
+            margin-left: 0;
+    }
+
+    .description-text {
+        font-size: 16px;
+    }
+
+    .hero-text {
+        flex-basis: 50%;
+    }
+
+    .hero-bg {
+        flex-basis: calc(50% - 20px);
+    }
+
+    .about-info {
+        margin-bottom: 34px;
+    }
+
+    .profit-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 45px;
+        margin-bottom: 76px;
+    }
+
+    .description-profit {
+        letter-spacing: 0;
+        font-size: 16px;
+    }
+
+    .profit-grid .title-h4 {
+        letter-spacing: 0;
+    }
+
+    li {
+        padding-right: 105px;
+    }
 
 }
 

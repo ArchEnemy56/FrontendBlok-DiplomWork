@@ -12,6 +12,13 @@ btnClose.addEventListener("click", function () {
     modal.classList.remove("active");
 });
 
+const navLinks = document.querySelectorAll(".nav-link");
+navLinks.forEach(link => {
+    link.addEventListener("click", function () {
+        modal.classList.remove("active");
+    });
+});
+
 // Smooth
 
 window.addEventListener('scroll', function () {
