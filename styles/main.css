@@ -67,7 +67,7 @@ body {
     margin-right: 92px;
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
-    background-size:cover
+    background-size: cover
 }
 
 .nav-menu {
@@ -270,8 +270,6 @@ body {
     font-family: "Montserrat-Bold", sans-serif;
     font-size: 28px;
     font-weight: 700;
-    right: 0;
-    top: 0;
     margin: 0;
     letter-spacing: 1px;
 }
@@ -526,7 +524,8 @@ input:invalid:focus {
     margin-bottom: 34px;
 }
 
-.about-info {display: grid;
+.about-info {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1vw;
     margin-bottom: 80px;
@@ -597,7 +596,7 @@ ul {
     max-width: 1143px;
 }
 
-.footer-inf > p {
+.footer-inf>p {
     margin-top: 0;
     margin-bottom: 26px;
     font-size: 14px;
@@ -687,14 +686,14 @@ ul {
         display: block;
     }
 
-    .header > .nav-menu {
+    .header>.nav-menu {
         display: none;
     }
 }
 
 @media (max-width: 768px) {
 
-    .hero-text h1{
+    .hero-text h1 {
         font-size: 26px;
         letter-spacing: 2px;
     }
@@ -705,7 +704,7 @@ ul {
     }
 
     .description {
-            margin-left: 0;
+        margin-left: 0;
     }
 
     .description-text {
@@ -746,6 +745,46 @@ ul {
 }
 
 @media (max-width: 650px) {
+
+    .hero {
+        margin-bottom: 76px;
+    }
+
+        .hero-text h1 {
+        letter-spacing: 0px;
+    }
+
+
+    .btn-yellow {
+        width: 100%;
+        max-width: 250px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .iph {
+        width: 270px;
+    }
+
+    .gray-strip {
+        height: 416px;
+        margin-bottom: 76px;
+    }
+
+    .subscribe {
+        margin-top: 57px;
+    margin-bottom: 38px;
+    }
+
+    .form .btn-yellow {
+        flex-basis: auto;
+        margin-top: 30px;
+    }
+
+    .training {
+        margin-bottom: 20px;
+    }
+
     .hero-bg,
     .hero-img {
         display: none;
@@ -760,15 +799,122 @@ ul {
     }
 
     .logo {
-    margin-right: 30px; 
-    width: 78px;
-    height: 24px;   
+        margin-right: 30px;
+        width: 78px;
+        height: 24px;
     }
-    
+
+    .arrow {
+        display: none;
+    }
+
+    .title-h3 {
+        font-size: 26px;
+        letter-spacing: 1px;
+        max-width: 200px;
+    }
+
+    .date {
+        font-size: 16px;
+        letter-spacing: 0px;
+    }
+
+    .grid {
+        grid-template-rows: repeat(6, 112px);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            "a"
+            "b"
+            "c"
+            "d"
+            "e"
+            "f";
+        margin-bottom: 76px;
+    }
+
+    .item-date,
+    .item-text {
+        font-size: 14px;
+    }
+
+    .item-icon {
+        width: 2.5rem;
+        height: auto;
+        bottom: 25px;
+    }
+
+    .item:nth-child(2) img {
+        width: 1.5rem;
+    }
+
+    .item:nth-child(3) img {
+        width: 3rem;
+    }
+
+    .item:nth-child(4) img {
+        width: 2rem;
+    }
+
+    .item {
+        padding: 12px;
+    }
+
+    .subscribe .title-h3::before {
+    content: '';
+    width: 31px;
+    height: 31px;
+    top: -15px;
+    left: -10px;
+    }
+
+    .form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-img {
+        display: none;
+    }
+
+    .about-info {
+        grid-template-columns: none;
+        justify-content: center;
+    }
+
+    .about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .form .btn-yellow {
+    flex-basis: auto;
+    max-width: 303px;
+    }
+
+    .description-about {
+    width: 100%;
+    max-width: 483px;
+    letter-spacing: 0px;
+    line-height: 1.25;
+    margin-top: 16px;
+    margin-bottom: 34px;
+    }
+
+    .about-text .btn-yellow {
+        max-width: 303px;
+    }
+
+        .profit-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+        margin-bottom: 68px;
+    }
+
+    .profit-grid .title-h4,
+    .description-profit {
+        font-size: 16px;
+    }
+
 }
 
-@media (max-width: 360px) {
-    .hero-text h1 {
-    letter-spacing: 0px;
-    }
-}
