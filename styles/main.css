@@ -120,6 +120,7 @@ body {
     border-radius: 100%;
     position: absolute;
     z-index: -1;
+    top: -4px;
     left: -13px;
 }
 
@@ -391,7 +392,6 @@ body {
     margin: 0 auto;
     margin-bottom: 159px;
     background: var(--light-gray);
-    background-size: 1920px;
     height: 348px;
     width: 100%;
     display: flex;
@@ -401,12 +401,26 @@ body {
 
 .gray-strip::before {
     content: '';
-    position: absolute;
     background: var(--light-gray);
-    z-index: -1;
-    left: -600px;
-    width: calc(100% + 600px);
+    height: 348px;
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    bottom: 0;
+    left: -188px;
+    right: 50%;
+}
 
+.gray-strip::after {
+    content: '';
+    background: var(--light-gray);
+    height: 348px;
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    bottom: 0;
+    right: -12.3vw;
+    left: 50%;
 }
 
 .subscribe .title-h3 {
@@ -618,6 +632,32 @@ ul {
     background: var(--light-gray);
     height: 150px;
     padding: 20px;
+    position: relative;
+    z-index: 0;
+}
+
+.footer::before {
+    content: '';
+    background: var(--light-gray);
+    height: 190px;
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    bottom: 0;
+    left: -188px;
+    right: 50%;
+}
+
+.footer::after {
+    content: '';
+    background: var(--light-gray);
+    height: 190px;
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    bottom: 0;
+    right: -12.3vw;
+    left: 50%;
 }
 
 .footer-top {
@@ -1004,4 +1044,10 @@ ul {
         height: 80px;
     }
 
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+    scroll-behavior: auto;
+    }
 }
